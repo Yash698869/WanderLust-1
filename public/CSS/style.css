@@ -1,0 +1,133 @@
+body{
+    background-color: palevioletred;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+.container{
+  flex: 1 !important;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+/* giving details to compass ion */
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important; /* important terms that it overide the bootstrap conditions */
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brands {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card{
+  border: none !important;
+  margin-bottom: 2rem;
+  /* border-radius: 2rem !important; */
+  overflow: hidden; /* THIS IS IMPORTANT */
+}
+
+.card-img{
+  border-radius: 2rem;
+  width: 100% !important;
+  object-fit: cover !important ; 
+  border-radius: 2rem !important;
+}
+
+.card-body{
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400;
+}
+
+/* global font class */
+.jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important; /* change 200–800 based on need */
+  font-style: normal !important;
+}
+
+.listing-link{
+  text-decoration: none;
+}
+
+/* card-effect */
+/* Hide overlay by default */
+.card-img-overlay {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2rem;
+}
+
+/* Show overlay when card is hovered */
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+/* Show Page */
+.show-img{
+  height: 30vh;
+}
+
+.btns{
+  /* display: flex; */
+}
+
+/* page ko full height dene ke liye */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* NEW: main content jo footer ko neeche dhakel dega */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
