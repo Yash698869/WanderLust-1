@@ -22,17 +22,20 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-// MongoDB connection URL
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// MongoDB connection URL (MongoDB Atlas Cloud Database)
+const MONGO_URL = "mongodb+srv://yashchourasia6988_db_user:QeWW0avHWZZ88Cza@cluster0.9koqvs6.mongodb.net/wanderlust?retryWrites=true&w=majority&appName=Cluster0";
 
 // Connect to MongoDB
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(MONGO_URL, {
+    serverSelectionTimeoutMS: 30000,
+    socketTimeoutMS: 45000,
+  });
 }
 
 main()
   .then(() => {
-    console.log("connected to PC");
+    console.log("connected to DB");
   })
   .catch((err) => {
     console.log(err);
